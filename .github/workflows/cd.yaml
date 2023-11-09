@@ -13,7 +13,7 @@ jobs:
       - name: build image and push to docker hub
         uses: docker/build-push-action@v1.1.0
         with:
-          username: rufuscool
+          username: rampss
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: rufuscool/argocd
           tags: ${{ github.sha }}, latest     
