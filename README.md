@@ -1,5 +1,7 @@
 # ArgoCD
 
+![Source](img/argocd-git-00.png)
+
 - [ArgoCD](#argocd)
   - [Passo 01 - Instalação do ArgoCD](#passo-01---instalação-do-argocd)
   - [Passo 02 - Conhecendo nossa aplicação em Python](#passo-02---conhecendo-nossa-aplicação-em-python)
@@ -73,7 +75,7 @@ Source
 Destination
 ![Source](img/argocd-newapp-03-destination.png)
 
-Helm
+Kustomization
 ![Source](img/argocd-newapp-04-helm.png)
 
 Clique em **Create**
