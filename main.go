@@ -2,12 +2,14 @@ package main
 
 import (
 	"net/http"
+	"os"
 	// add prometheus
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		hostname, _ := os.Hostname()
 		w.Write([]byte(`
 			<!DOCTYPE html>
 			<html>
@@ -28,6 +30,7 @@ func main() {
 				</head>
 				<body>
 					<h1>Workshop DevOps !!!!</h1>
+					<p>Nome do Pod: ` + hostname + `</p>
 				</body>
 			</html>
 		`))
