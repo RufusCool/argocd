@@ -13,9 +13,9 @@ jobs:
       - name: build image and push to docker hub
         uses: docker/build-push-action@v1.1.0
         with:
-          username: wesleywillians
+          username: rufuscool
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: wesleywillians/argocd
+          repository: rufuscool/argocd
           tags: ${{ github.sha }}, latest     
 
   deploy:
@@ -34,7 +34,7 @@ jobs:
       - name: update k8s
         run: |
           cd k8s
-          kustomize edit set image goapp=wesleywillians/argocd:${{ github.sha }}
+          kustomize edit set image goapp=rampss/argocd:${{ github.sha }}
           cat kustomization.yaml
 
       - name: commit
