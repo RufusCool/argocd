@@ -46,7 +46,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 - Acesse via browser
 
-https://seuhost
+https://goapp.192.168.15.43.nip.io
 
 > Usuário padrão é `admin`
 
@@ -63,7 +63,7 @@ https://seuhost
 ### Configurando uma nova App
 
 General
-![General](/argocd/img/argocd-newapp-01-general.png)
+![General](/img/argocd-newapp-01-general.png)
 
 > O `dev` no final do nome da aplicação já indica que iremos fazer o deploy separado por ambientes e facilita a identificação posterior dentro do argo.
 
