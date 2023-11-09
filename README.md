@@ -38,6 +38,8 @@ kubectl apply -n argocd -f ingress.yaml
 kubectl get ingress -n argocd
 # verificando detalhes do ingress
 kubectl describe ingress argocd-server-http-ingress -n argocd
+# Realizar port-forward
+kubectl port-forward svc/argocd-server 8080:80 -n argocd
 ```
 
 - Recuperando a senha inicial
