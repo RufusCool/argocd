@@ -15,7 +15,7 @@ jobs:
         with:
           username: rampss
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: rufuscool/argocd
+          repository: rampss/argocd
           tags: ${{ github.sha }}, latest     
 
   deploy:
